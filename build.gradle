@@ -17,9 +17,9 @@ plugins {
 
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.17.0'
+version = '1.18.0'
 group = 'thedarkcolour.kotlinforforge'
-archivesBaseName = 'kotlinforforge'
+archivesBaseName = 'kotlinforforge-dust'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
