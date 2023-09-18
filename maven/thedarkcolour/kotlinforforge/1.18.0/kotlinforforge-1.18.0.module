@@ -1,0 +1,256 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "thedarkcolour",
+    "module": "kotlinforforge",
+    "version": "1.18.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains",
+          "module": "annotations",
+          "version": {
+            "requires": "24.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core-jvm",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-jdk8",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlinforforge-1.18.0.jar",
+          "url": "kotlinforforge-1.18.0.jar",
+          "size": 95360,
+          "sha512": "0d39e627df8261e167b26dd8681f80fef73fb4d8550e91bf5be1c4e96f54ae70e10ca6cdc61052015d5910c9e54aac40f64805f6a40db6f693e5c60182d4eb66",
+          "sha256": "a9e63991fc0a24d7a6c7a5e7d74f0cc03e1efd8a66681c765fb81a71a5172f42",
+          "sha1": "0ca07246d1e662d179819ed962fd0349f70553a7",
+          "md5": "1e527b99056d15fe4a8092ce8423219f"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "org.jetbrains",
+          "module": "annotations",
+          "version": {
+            "requires": "24.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core-jvm",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-jdk8",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.6.0"
+          }
+        },
+        {
+          "group": "net.minecraftforge",
+          "module": "forge",
+          "version": {
+            "requires": "1.16.5-36.1.4_mapped_official_1.16.5"
+          }
+        },
+        {
+          "group": "net.minecraftforge",
+          "module": "forge",
+          "version": {
+            "requires": "1.16.5-36.1.4_mapped_official_1.16.5"
+          },
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "forge",
+              "type": "jar",
+              "extension": "jar",
+              "classifier": "launcher"
+            }
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlinforforge-1.18.0.jar",
+          "url": "kotlinforforge-1.18.0.jar",
+          "size": 95360,
+          "sha512": "0d39e627df8261e167b26dd8681f80fef73fb4d8550e91bf5be1c4e96f54ae70e10ca6cdc61052015d5910c9e54aac40f64805f6a40db6f693e5c60182d4eb66",
+          "sha256": "a9e63991fc0a24d7a6c7a5e7d74f0cc03e1efd8a66681c765fb81a71a5172f42",
+          "sha1": "0ca07246d1e662d179819ed962fd0349f70553a7",
+          "md5": "1e527b99056d15fe4a8092ce8423219f"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "kotlinforforge-1.18.0-obf.jar",
+          "url": "kotlinforforge-1.18.0-obf.jar",
+          "size": 7280021,
+          "sha512": "672294035037c3b31334b69d91c7698cb2df44c2c8b753f021b8b8971992f218e4d0f972e8578049e7525db5ca465843417e0d7a843c4581a38c69175ce656c0",
+          "sha256": "d902ec6c76d82eea7d6247b16839dc68f6d7690b47dbe7a9db612874b79c31e0",
+          "sha1": "df57f7b848f69356aba155d9e41d282d58c2b02a",
+          "md5": "d01d11c340f10e5aea00571cb9387082"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "kotlinforforge-1.18.0-sources.jar",
+          "url": "kotlinforforge-1.18.0-sources.jar",
+          "size": 22293,
+          "sha512": "cc1d6c119b2ea1af8cc6f1aa92864b822334d4591a430d69e29c9addbbbdddb6e19f29fb1fcc8592ce8aef57c430c0667edc347b4d0e7c04da7f171a5fe5757c",
+          "sha256": "9b7db840fcf62f340064cf5f2904da40d64d9f482a715ba3ba1fe92051603516",
+          "sha1": "1bcde23263a54af2b6c9851c45a78f87b627f4f1",
+          "md5": "41dd8afafcb995954332e3fb40614870"
+        }
+      ]
+    }
+  ]
+}

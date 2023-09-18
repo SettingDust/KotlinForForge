@@ -23,24 +23,24 @@ git clone https://github.com/thedarkcolour/KotlinModdingSkeleton.git
 
 To implement in an existing project, paste the following into your build.gradle:
 ```groovy
-buildscript {
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0"
-    }
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.9.10"
 }
-
-apply plugin: 'kotlin'
 
 repositories {
     maven {
-        name = 'kotlinforforge'
-        url = 'https://thedarkcolour.github.io/KotlinForForge/'
+        name 'kotlinforforge'
+        url 'https://raw.githubusercontent.com/SettingDust/KotlinForForge/1.x/maven/'
+
+        content {
+            includeGroup "thedarkcolour"
+        }
     }
 }
 
 dependencies {
     // Use the latest version of KotlinForForge
-    implementation 'thedarkcolour:kotlinforforge:1.16.0'
+    implementation 'thedarkcolour:kotlinforforge:1.18.0'
 }
 ```
 Then, change the following to your mods.toml file:

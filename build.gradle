@@ -1,3 +1,5 @@
+import magik.GithubArtifactRepository
+
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
@@ -5,14 +7,16 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6.+', changing: true
     }
 }
 
 plugins {
-    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id "org.jetbrains.kotlin.jvm" version "$kotlin_version"
     id "org.jetbrains.kotlin.plugin.serialization" version "$kotlin_version"
+    id "maven-publish"
+    id "elect86.magik" version "0.3.3"
 }
 
 apply plugin: 'net.minecraftforge.gradle'
@@ -21,7 +25,10 @@ version = '1.18.0'
 group = 'thedarkcolour.kotlinforforge'
 archivesBaseName = 'kotlinforforge-dust'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(8))
+    withSourcesJar()
+}
 
 tasks.build.dependsOn kotlinSourcesJar
 tasks.build.dependsOn shadowJar
@@ -79,6 +86,16 @@ shadowJar {
     }
 }
 
+tasks.register("setMavenPath") {
+    doFirst {
+        System.setProperty("maven.repo.local", project.file("./maven").absolutePath)
+    }
+}
+
+tasks.withType(PublishToMavenLocal).configureEach {
+    dependsOn("setMavenPath")
+}
+
 jar {
     manifest {
         attributes(['FMLModType': 'LANGPROVIDER'])
@@ -108,4 +125,15 @@ compileTestKotlin {
 
 kotlinSourcesJar {
     from(sourceSets.main.kotlin.srcDirs)
+}
+
+publishing {
+    publications {
+        kotlinforforge(MavenPublication) {
+            setGroupId("thedarkcolour")
+            setArtifactId("kotlinforforge")
+
+            from components.java
+        }
+    }
 }
